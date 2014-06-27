@@ -1,0 +1,77 @@
+body{
+background-image: url("../imagenes/copa.jpg");
+background-size: 100% auto; 
+
+}
+
+.menu th a:link,a:visited{
+	color: #146A2F;
+	font-family: verdana;
+	font-size: 16pt;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu th a:hover{
+	text-decoration: underline;
+	background-color: #FFFFFF;
+	display: block;
+
+}
+
+table th {
+	background-color: #B8C6D8;
+	color: #000000;
+	font-family: Arial;
+	font-size: 14pt;
+}
+
+
+.renglon_verde_alto {
+	background-color: #146A2D;
+	color: #FFFFFF;
+	font-family: Arial;
+	font-size:10pt;
+	text-align: center;
+
+}
+.renglon_verde_bajo {
+	background-color: #30A646;
+	color: #FFFFFF;
+	font-family: Arial;
+	font-size:10pt;
+	text-align: center;
+	
+}
+.renglon_over{
+	background-color:#FFFFFF;
+	color: #000000;
+	font-family: Arial;
+	font-size: 10pt;
+	text-align: center;
+}
+
+
+/*
+.menu {
+	border: 1px solid #000000;
+	background-color: #F7EC3C;
+
+}
+.menu th  {
+	border: 1px solid #000000;
+	background-color: #F7EC3C;
+	padding: 0;
+
+}
+.menu th a {
+	border: 1px solid #000000;
+	background-color: #F7EC3C;
+	color: #000000;
+	font-family: Verdana;
+	font-size: 16pt;
+	text-align: center;
+
+}*/
+
+
