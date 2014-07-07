@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<style>
+
+
+#calculadora tr td
+{
+padding: 15px;
+border: 1px solid #000000;
+font-family: trebuchet, verdana, arial;
+color: #000000;
+background: #FFFFFF;
+font-size: 18px;
+}
+
+#calculadora tr td:hover{
+color: #FFFFFF;
+background: #000000;
+cursor: pointer;
+}
+
+#resultado_calculadora{
+font-family: trebuchet, verdana, arial;
+font-weight: bold;
+}
+
+
+.no-style
+{
+background: #FFFFFF;
+border: 0;
+}
+.no-style:hover
+{
+background: #FFFFFF;
+border: 0;
+}
+</style>
+
+<script>
+$(function(){
+
+$("#calculadora tr td").click(function(){
+if ($(this).text() != "C" && $(this).text() != "=")
+{
+$("#resultado_calculadora").append($(this).text());
+}
+if ($(this).text() == "=")
+{
+operacion = $("#resultado_calculadora").text().split("");
+total = "";
+for ( var index in operacion)
+{
+total = total + operacion[index];
+
+}
+$("#resultado_calculadora").text(eval(total));
+}
+if($(this).text() == "C")
+{
+$("#resultado_calculadora").text("");
+}
+});
+});
+
+</script>
+
+<head>
+
+<body>
+
+<center>
+<h5><a href="http://jquery-manual.blogspot.com" target="_blank">Jquery Manual</a></h5>
+<h3>Calculadora con Jquery</h3>
+</center>
+
+<div>
+<center>
+<div id="resultado_calculadora"></div>
+
+<table id="calculadora">
+<tr>
+<td>7</td><td>8</td><td>9</td><td>/</td>
+</tr>
+<tr>
+<td>4</td><td>5</td><td>6</td><td>*</td>
+</tr>
+<tr>
+<td>1</td><td>2</td><td>3</td><td>-</td>
+</tr>
+<tr>
+<td>0</td><td>C</td><td>.</td><td>+</td>
+<tr>
+<td></td><td></td><td></td><td>=</td>
+</tr>
+</tr>
+</table>
+</center>
+</div>
+</body>
+
+</html>

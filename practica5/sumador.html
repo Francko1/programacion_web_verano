@@ -21,29 +21,85 @@
             <script src="js/bootstrap.min.js"></script>
 	        <script>
 	          $(document).ready(
-	          	function(){
-	          		alert("EJEMPLO");
-	         	$('#boton').click(
-						function (){
-							  var n1= $("#n1").val();
+	          
+	         function(){
 
-				                var n2= $("#n2").val();
+	          	$('#suma').click(
+						function ()
+						{
 
-				                var resultado= (parseInt(n1)+parseInt(n2));
+								  var n1= $("#n1").val();
+								  var n2= $("#n2").val();
+								  var resultado= (parseInt(n1)+parseInt(n2));
+								  var resulta=("el resultado es " +resultado)
+								  alert(resultado);
 
-				               
+							
+								 
+						});
+	           	$('#resta').click(
+						function ()
+						{
 
-				                alert(resultado);
-				});
+								  var n1= $("#n1").val();
+								  var n2= $("#n2").val();
+								  var resultado= (parseInt(n1)-parseInt(n2));
+								 alert(resultado);
+								 
+						});
+	           	$('#multiplicacion').click(
+						function ()
+						{
+
+								  var n1= $("#n1").val();
+								  var n2= $("#n2").val();
+								  var resultado= (parseInt(n1)*parseInt(n2));
+								    alert(resultado);
+
+
+						
+						});
+
+	           		$('#division').click(
+						function ()
+						{
+
+								  var n1= $("#n1").val();
+								  var n2= $("#n2").val();
+								  var resultado= (parseInt(n1) % parseInt(n2));
+								    alert(resultado);
+
+
+						
+						});
+	           	
+	           			$('#oculta').click(
+						function(){
+							$('#texto').hide('slow');
+						});
+
+						$('#muestra').click(
+						function(){
+							$('#texto').show('slow');
+						});
+
+						$('#mayus').click(
+								function(){
+									mayus.toUpperCase();
+									alert('#texto');
+								});
+
 
 					
 
-	                      
 
 
-					 
+	           
+	     }
+	           );
 
-	            });
+	  
+
 	        </script>
 
 
@@ -52,12 +108,46 @@
 
 		<br>
 		<div class="row" align=" center">
-		<label for="n1">numero1</label>
-		<input name="n1" type="text" id="n1"  />
-		<label for="n2">numero2</label>
-		<input name="n1" type="text" id="n2"  />
+			<label for="n1">numero1</label>
+			<input name="n1" type="text" id="n1"  />
+			<label for="n2">numero2</label>
+			<input name="n1" type="text" id="n2"  />
 
-		<input name="suma" type="button"  id ="boton"  value="suma" />
+			<input name="suma" type="button"  id ="suma"  value="suma" />
+			<input name="resta" type="button"  id ="resta"  value="resta" />
+			<input name="multiplicacion" type="button"  id ="multiplicacion"  value="multiplicacion" />
+		
+		</div>
+
+			<div id="container" class="elemento2">
+					<h1 id="titulo">
+						<p class="parrafo" id="texto" align="center"> texto
+						</p>
+					</h1>
+					
+				</div>
+				<div class="row" align="center">
+					<input name="oculta" type="button"  id ="oculta"  value="oculta" />
+					<input name="muestra" type="button"  id ="muestra"  value="muestra" />
+				</div>
+<br>
+<br>
+<br>
+
+				<div class="row" align="center">
+					
+					<input name="mayusculas" type="button"  id ="mayus"  value="mayusculas" />
+					<input name="minusculas" type="button"  id ="minus"  value="minusculas" />
+					<input name="deletrear" type="button"  id ="delet"  value="deletrear" />
+				</div>
+				
+<br>
+<br>
+<br>
+			
+		
+
+
 					
 
 			
