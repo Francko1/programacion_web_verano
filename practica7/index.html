@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Practica 7</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-datetimepicker.css" />
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-   
-   
 
-
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,244 +23,94 @@
     <![endif]-->
   </head>
   <body>
-
-    
-
-    <div class="container">
-      <br><br>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="tab-pane active" id="horizontal-form-tab">
-                                    <form class="form-horizontal registerForm">
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Usuario </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" name="username" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Email </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" name="email" />
-                                            </div>
-                                        </div>
-                                    </form>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <form class="form-inline registerForm">
-              <div class="form-group">
-                  <input type="text" class="form-control" name="username" placeholder="Usuario" />
-              </div>
-              <div class="form-group">
-                  <input type="text" class="form-control" name="email" placeholder="Email" />
-              </div>
-          </form>
-
-
-        </div>
-      </div>
-      <div class="row">
-        <br><hr><br>
-        <div class="col-md-6">
-          <form class="form-horizontal registerForm">
-              <div class="form-group">
-                  <label class="col-lg-3 control-label">Usuario</label>
-                  <div class="col-lg-9">
-                      <input type="text" class="form-control" name="username" />
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label class="col-lg-3 control-label">Email</label>
-                  <div class="col-lg-9">
-                      <input type="text" class="form-control" name="email" />
-                  </div>
-              </div>
-          </form>
-
-        </div>
-        <div class="col-md-6">
-          <form class="form-horizontal registerForm">
-              <div class="form-group">
-                  <label class="col-lg-2 control-label">Cuenta</label>
-                  <div class="col-lg-4">
-                      <input type="text" class="form-control" name="username" placeholder="Usuario" />
-                  </div>
-                  <div class="col-lg-4">
-                      <input type="text" class="form-control" name="email" placeholder="Email" />
-                  </div>
-              </div>
-          </form>
-
-        </div>
-      </div>
-      <div class="row">
-        <br><hr><br>
-        <div class="col-md-6">
-          <div class="tab-pane active" id="horizontal-form-tab">
-                                    <form class="form-horizontal registerForm">
-                                      <h3>Formulario Articulo</h3>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Nombre articulo </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" name="username" id="id_articulo" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Resumen </label>
-                                            <div class="col-lg-6">
-                                                <textarea type="text" class="form-control" name="texto" id="resumen" ></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Abstract </label>
-                                            <div class="col-lg-6">
-                                                <textarea type="text" class="form-control" name="texto" id="resumen" ></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Introduccion </label>
-                                            <div class="col-lg-6">
-                                                <textarea type="text" class="form-control" name="texto" id="resumen" ></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Metodologia </label>
-                                            <div class="col-lg-6">
-                                                <textarea type="text" class="form-control" name="texto" id="metodologia" ></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Contenido </label>
-                                            <div class="col-lg-6">
-                                                <textarea type="text" class="form-control" name="texto" id="contenido" ></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Fecha creacion  </label>
-                                            <div class="col-lg-6">
-                                            <input type="date" id="fecha_creacion" name="fecha_creacion">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-lg-3 control-label">Fecha creacion  </label>
-                                            <div class="col-lg-6">
-                                            <input type="file" id="archivo_pdf" name="archivo_pdf">
-                                            </div>
-                                        </div>
-                                    </form>
-          </div>
-
-        </div>
-        <div class="col-md-6">
-          <div class="tab-pane active" id="horizontal-form-tab">
-                                    <form class="form-horizontal registerForm">
-                                      <h3>Formulario Revista</h3>
-                                    </form>
-          </div>
-
-        </div>
-      </div>
+  <div class="row">
       
+                      
+                        <div class="col-md-4">
+                          <h3>valida acceso</h3>
+                            <form class="registerForm">
+                              <div class="form-group">
+                                  <label>Username</label>
+                                  <input type="text" class="form-control" name="username" />
+                              </div>
+                              <div class="form-group">
+                                  <label>Email address</label>
+                                  <input type="text" class="form-control" name="email" />
+                              </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                          <h3>activar cuenta</h3>
+                            <form class="registerForm">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" name="username" placeholder="Username" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Email address" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                          <h3>activa cuenta 2</h3>
+                            <form class="registerForm">
+                                 <div class="form-group">
+                                    <label class="col-lg-3 control-label">Username</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" name="username" />
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="col-lg-3 control-label">Email address</label>
+                                      <div class="col-lg-9">
+                                          <input type="text" class="form-control" name="email" />
+                                      </div>
+                                  </div>
+                            </form>
+                        </div>
+
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/jquery.min.js"></script> <!-- archivo jquery-->
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script> 
-        <script type="js/bootstrapValidator.js"></script>   
-    <script type="text/javascript" src="js/moment.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datetimepicker.es.js"></script>
-    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
 
-    <script src="js/bootstrapValidator.min.js"></script>
-    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrapValidator.min.js"></script>
-
-    <script>
-$(document).ready(function() {
-    $('.registerForm').bootstrapValidator({
-        message: 'This value is not valid',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
+    <script type="text/javascript">
+        $(document).ready(function() {
+           $('.registerForm').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                 invalid: 'glyphicon glyphicon-remove',
+                 validating: 'glyphicon glyphicon-refresh'
+               },
         fields: {
             username: {
-                message: 'El Usuario no es valido',
+                message: 'The username is not valid',
                 validators: {
                     notEmpty: {
-                        message: 'El Usuario no puede estar vacio'
+                        message: 'The username is required and cannot be empty'
                     },
                     stringLength: {
-                        min: 6,
-                        max: 30,
-                        message: 'El usuario debe ser de entre 6 y 30 caracteres'
+                        min: 4,
+                        max: 10,
+                        message: 'The username must be more than 6 and less than 30 characters long'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: 'El usuario solo consiste en caracteres alfabeticos, numericos y guion bajo'
+                        message: 'The username can only consist of alphabetical, number and underscore'
                     }
                 }
             },
             email: {
                 validators: {
                     notEmpty: {
-                        message: 'El email no puede estar vacio'
+                        message: 'The email is required and cannot be empty'
                     },
                     emailAddress: {
-                        message: 'La direccion de email no es valida'
+                        message: 'The input is not a valid email address'
                     }
                 }
             }
         }
     });
-
-  $(function () {
-                $('#datetimepicker4').datetimepicker({
-                    language: 'es',
-                    pickDate: false
-                });
-            });
-});
-</script>
-
-              <script type="text/javascript">
-            
-        </script>
-
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker5').datetimepicker({
-                    language: 'es',
-                    pickTime: false
-                });
-            });
-        </script>
-
-        <script type="text/javascript">
-                    $(function () {
-                        $('#datetimepicker7').datetimepicker({
-                            language: 'es',
-                            defaultDate: "11/1/13",
-                            disabledDates: [
-                                moment("12/25/2013"),
-                                new Date(2013, 11 - 1, 21),
-                                "11/22/2013 00:53"
-                            ]
-                        });
-                    });
-                </script>
-
- 
-
-
-
+    });</script>
+        <script src="js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
   </body>
 </html>
