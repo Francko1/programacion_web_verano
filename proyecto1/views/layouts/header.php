@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/verano_web/proyecto1');
+  define('BASEURL','http://localhost/programacion_web_verano');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,11 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,6 +24,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="../css/mi.css" rel="stylesheet">
+
   </head>
 
   <body role="document">
@@ -37,21 +43,37 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="<?php echo BASEURL; ?>/views/site/inicio.php">Inicio</a></li>
+            <li class="active"><a href="<?php echo BASEURL; ?>/proyecto1/views/site/inicio.php">Inicio</a></li>
             
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">opciones  <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registros  <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="">op1</a></li>
+                <li><a href="../equipo/equipo.php">Equipo</a></li>
                 <li class="divider"></li>
-                <li><a href="">op2</a></li>
+
+                <li><a href="../estadio/estadio.php">Estadio</a></li>
+                <li class="divider"></li>
+
+                <li><a href="../integrante/integrante.php">Integrante</a></li>
+                <li class="divider"></li>
+
+                <li><a href="../posicion/posicion.php">Posicion</a></li>
+                <li class="divider"></li>
+
+                <li><a href="../pais/pais.php">Pais</a></li>
+                <li class="divider"></li>
+
+                <li><a href="../continente/continente.php">Continente</a></li>
+                <li class="divider"></li>
               </ul>
             </li>
+
+
 
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo BASEURL; ?>/views/site/login.php">
+            <li><a href="<?php echo BASEURL; ?>/proyecto1/views/site/login.php">
               <span class="glyphicon glyphicon-log-in"></span> Login</a>
             </li>
           </ul>
@@ -63,3 +85,7 @@
 
     <div class="container theme-showcase" role="main">
 
+
+<br>
+<br>
+<br>
