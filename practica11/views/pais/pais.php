@@ -18,14 +18,17 @@
     $nom=$_FILES['bandera']['nom'];
     move_uploaded_file($_FILES['bandera']['tmp_name'], "../../models".$nom);
   }*/
+   $paisC= new PaisController();
   if (isset($_POST['nombre']))
   {
-    $paisC= new PaisController();
+   
     $paisC->insertaPais($_POST,$_FILES);
   }
 ?>
     <div class="row">
   <div class="col-md-10">
+
+  <!--meterlo a una funcion-->
       <?php 
       if ($paisC->muestra_errores) {
     ?>    
@@ -55,7 +58,7 @@
           <div class="form-group">
             <label class="col-lg-3 control-label" for="nombre">Nombre:</label>
             <div class="col-lg-3">
-                <input type="text" class="form-control" name="nombre" id="nombre"/>
+                <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $paisC->get_nombre(); ?>" />
             </div>
           </div>
 
