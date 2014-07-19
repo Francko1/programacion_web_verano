@@ -8,9 +8,10 @@
   include ('../../libs/Er.php');
   include ('../layouts/header.php');
 
+
+    $revistaC=new RevistaController();
   if (isset($_POST['nombre'])){
   	
-  	$revistaC=new RevistaController();
   	$revistaC->insertaRevista($_POST,$_FILES);
 
 	}
@@ -19,6 +20,30 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+
+  <!--meterlo a una funcion-->
+      <?php 
+      if ($revistaC->muestra_errores) {
+    ?>    
+       <div class="alert alert-danger">
+
+          <?php //foreach => leer arreglos 
+            foreach ($revistaC->errores as $value) {
+                echo "<p>error: $value</p>";
+             
+            }
+
+
+           ?>
+
+       </div>
+    <?php 
+      }
+      else{
+
+        
+      }
+     ?>
           <form class="form-horizontal registerForm"  action="" method="POST"  ENCTYPE="multipart/form-data">
           
             <br>
@@ -27,7 +52,7 @@
             <div class="form-group">
                   <label class="col-lg-3 control-label">Nombre revista </label>
                   <div class="col-lg-6">
-                      <input type="text" class="form-control username"  name="nombre" id="nombre"placeholder="" />
+                      <input type="text" class="form-control username"  name="nombre" id="nombre"placeholder="nombre" value="<?php echo $revistaC->get_nombre(); ?>"  />
                   </div>
             </div>
             <div class="form-group">

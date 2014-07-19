@@ -10,11 +10,11 @@
       include ('../../libs/Er.php');
       include ('../layouts/header.php');
 
- ?>
 
-<?php 
+ $articulo =new ArticuloController();
+
   if (isset($_POST['nombre'])){
-    $articulo =new ArticuloController();
+   
     $articulo->insertaArticulo($_POST,$_FILES);
 
   }
@@ -22,20 +22,44 @@
 <div class="container">
     <div class="row">
             <div class="col-md- col-md-offset-3">
+            <?php 
+      if ($articulo->muestra_errores) {
+    ?>    
+       <div class="alert alert-danger">
+
+          <?php //foreach => leer arreglos 
+            foreach ($articulo->errores as $value) {
+                echo "<p>error: $value</p>";
+             
+            }
+
+
+           ?>
+
+       </div>
+    <?php 
+      }
+      else{
+
+        
+      }
+     ?>
+
+
               <form class="form-horizontal "  action="" method="POST" id="form_articulo" enctype="multipart/form-data">
                   <label for="nombre" >Nombre del articulo</label>
-                  <input type="text" class="form-control" id="nombre"  name="nombre"  id="nombre" placeholder="nombre">
+                  <input type="text" class="form-control" id="nombre"  name="nombre"   placeholder="nombre" value="<?php echo $articulo->get_nombre(); ?>">
                   <!--********************************************-->
                   <label for="resumen" >Resumen</label>
                   <input type="text" class="form-control"   name="resumen"  id="resumen" placeholder="resumen">
                   <!--********************************************-->
 
                   <label for="abstract" >Abstract</label>
-                  <input type="text" class="form-control" id="abstract"  name="abstract"   placeholder="abstract">
+                  <input type="text" class="form-control" id="abstract"  name="abstract"   placeholder="abstract" value="<?php echo $articulo->get_abstract(); ?>" />
                   <!--********************************************-->
 
                   <label for="introduccion" >Introduccion</label>
-                  <input type="text" class="form-control" name="introduccion"  id="introduccion" placeholder="introduccion">
+                  <input type="text" class="form-control" name="introduccion"  id="introduccion" placeholder="introduccion" value="<?php echo $articulo->get_introduccion(); ?>" />
                   <!--********************************************-->
 
                   <label for="metodologia" >Metodologia</label>

@@ -1,3 +1,7 @@
-<?php include ('../layouts/header.php'); ?>
+<?php 
+session_start();
+include ('../layouts/header.php'); 
 
-<?php include ('../layouts/footer.php'); ?>
+
+
+ include ('../layouts/footer.php'); ?>

@@ -59,8 +59,13 @@ class Articulo extends Modelo{
             public function set_nombre($valor){
 
                 $er = new Er();
-              $this->nombre = trim($valor);
-            }
+        
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
+        }
+            $this->nombre = trim($valor);
+        
+    }
 
             //*****************************************************************
 

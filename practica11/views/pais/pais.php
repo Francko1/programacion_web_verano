@@ -1,4 +1,5 @@
 <?php 
+  include ('../../libs/security.php');
   include ('../../libs/adodb5/adodb-pager.inc.php');
   include ('../../libs/adodb5/adodb.inc.php');
   include ('../../models/Conexion.php');
@@ -26,7 +27,7 @@
   }
 ?>
     <div class="row">
-  <div class="col-md-10">
+  <div class="col-md-6">
 
   <!--meterlo a una funcion-->
       <?php 
@@ -71,20 +72,19 @@
           <div class="form-group">
             <label class="col-lg-3 control-label" for="idcontinente">Continente:</label>
             <div class="col-lg-5">
-              <select id="idcontinente" name="idcontinente" class="form-control" required>
-                  <option value="" disabled selected>Seleccionar</option>
-                  <option value="1">1</option>
-                  <option Value="2">2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-              </select>
+            <?php echo $paisC->getDropDown ('continente' ,'idcontinente' , 'idcontinente') ?>
             </div>
           </div>
           <input type="submit" name="Guardar" value="Guardar" />
         </form>  
 
+
+
       </div>
+        <div class="col-md-6" align="rigth">
+          <h2 class="text-center">lista de registro pais</h2>
+          <?php echo  $paisC->show_grid(); ?>
+        </div>
     </div>
   
 </div>

@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/web_v/proyecto1');
+  define('BASEURL','http://localhost/programacion_web_verano/practica11');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +34,11 @@
     <title>Práctica 11</title>
   </head>
 
-  <body>
+  <body role="document">
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -45,21 +46,47 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Examen 3</a>
+          <a class="navbar-brand" href="#">Programación Web</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../pais/pais.php" class="fancyy">Pais</a></li>
-            <li><a href="../revista/revista.php" class="fancyy">Revista</a></li>
-            <li><a href="../articulo/articulo.php" class="fancyy">Artículo</a></li>
-            <li><a href="../status/status.php" class="fancyy">Status</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Buscar...">
-          </form>
-        </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="<?php echo BASEURL; ?>/views/site/inicio.php">Inicio</a></li>
+            
+           
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">registro  <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+          
 
+                <li><a href="../pais/pais.php">pais</a></li>
+                <li class="divider"></li>
+
+                
+              </ul>
+            </li>
+
+          </ul>
+
+         <ul class="nav navbar-nav navbar-right">
+          <?php if (!isset($_SESSION['user'])) {?>
+            <li><a href="<?php echo BASEURL; ?>/views/site/login.php">
+              <span class="glyphicon glyphicon-log-in"></span>Login</a>
+            </li>
+            <?php }else{?>
+             <li><a href="<?php echo BASEURL; ?>/views/site/logout.php">
+              <span class="glyphicon glyphicon-log-out"></span>logout</a>
+            </li>
+            <?php } ?>
+          </ul>
+          
+
+        </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div class="container">
-      
+
+    <div class="container theme-showcase" role="main">
+
+
+<br>
+<br>
+<br>

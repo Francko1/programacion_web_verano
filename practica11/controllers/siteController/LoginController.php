@@ -25,7 +25,7 @@
 
 		public function iniciarSesion($rol,$email){
 			$_SESSION['user'] = $rol;
-			$_SESSION['email'] = $email;
+			$_SESSION['email'] = $email;	
 			header("Location: inicio.php");
 		}
 

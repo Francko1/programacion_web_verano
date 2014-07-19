@@ -1,8 +1,9 @@
 <?php
-	class RevistaController {
+	class RevistaController extends Revista {
 		
 		public $muestra_errores = false;
 		function __construct(){
+			parent::Revista();
 			
 		}
 
@@ -11,30 +12,31 @@
 		 	print_r($datos);
 		 	print_r($archivos);
 		  	echo"</pre>";
-			$revista = new Revista();
-			$revista->set_nombre($datos['nombre']);
-			$revista->set_portada($archivos['portada']);//agregamos archivos por datos
-			$revista->set_fecha($datos['fecha']);
-			$revista->set_volumen($datos['volumen']);
-			$revista->set_titulo($datos['titulo']);
-			$revista->set_subtitulo($datos['subtitulo']);
-			$revista->set_numero($datos['numero']);
-			$revista->set_clave($datos['clave']);
-			$revista->set_directorio($datos['directorio']);
-			$revista->set_editorial($datos['editorial']);
-			$revista->set_id_status($datos['id_status']);
+			//$this = new this();
+			$this->set_nombre($datos['nombre']);
+			$this->set_portada($archivos['portada']);//agregamos archivos por datos
+			$this->set_fecha($datos['fecha']);
+			$this->set_volumen($datos['volumen']);
+			$this->set_titulo($datos['titulo']);
+			$this->set_subtitulo($datos['subtitulo']);
+			$this->set_numero($datos['numero']);
+			$this->set_clave($datos['clave']);
+			$this->set_directorio($datos['directorio']);
+			$this->set_editorial($datos['editorial']);
+			$this->set_id_status($datos['id_status']);
 			
-			if(count($revista->errores)>0){
-				print_r($revista->errores);
-				die();
-			}
-			else{
-				move_uploaded_file($archivos['portada']['tmp_name'],
-                 "../images/".$archivos['portada']['name']);
+			if (count($this->errores)>0) {
+                //print_r($pais->errores); //esto no lo debe ver el usuario
+                $this->muestra_errores = true;
 
+               //die();
+            }
+			 else{
+                move_uploaded_file($archivos['bandera']['tmp_name'],
+                 "../images/".$archivos['bandera']['name']);
 
-			}
-			$revista->inserta($revista->get_atributos());
+                   $this->inserta($this->get_atributos());
+            };
 			
 		}
 
